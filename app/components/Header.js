@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Header extends Component {
 	constructor(props){
@@ -8,16 +9,16 @@ export default class Header extends Component {
 		return (
 			<div className="row" style={styles.Header}>
         <div className="co-6 col-sm-6 col-md-6 col-lg-6">
-          <h1>Rebuidling Froggy Oaks</h1>
+          <Link to="/"><h1>Rebuidling Froggy Oaks</h1></Link>
         </div>
         <div className="co-2 col-sm-2 col-md-2 col-lg-2">
-          <p>our story blog</p>
+          <Link to="/blog">Our Story Blog</Link>
         </div>
         <div className="co-2 col-sm-2 col-md-2 col-lg-2">
-          <p>how to defend</p>
+          <Link to="/defense">Be Defensive</Link>
         </div>
         <div className="co-2 col-sm-2 col-md-2 col-lg-2">
-          <p>rebuilding projects</p>
+          <Link to="/rebuild">Rebuilding Projects</Link>
         </div>
 			</div>
 		)
@@ -25,7 +26,5 @@ export default class Header extends Component {
 }
 
 const styles = {
-  Header: {
-    backgroundColor: "teal"
-  }
+
 }
