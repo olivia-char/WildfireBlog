@@ -1,12 +1,56 @@
 import React, { Component } from 'react';
-
+import ProfileBox from './ProfileBox'
 import ProjectBox from './ProjectBox'
 import BackgroundImg from '../assets/rock.jpg'
 import BasicIcon from '../assets/airbnb.png'
 export default class LandingPage extends Component {
 	constructor(props){
 		super(props)
-		this.state = {}
+		this.state = {
+			isClicked: false,
+			isVisable: true,
+		}
+	}
+	renderProjectBox() {
+		if(this.state.isVisable) {
+			return (
+				<div>
+					<ProjectBox />
+				</div>
+			)
+		}
+	}
+	statusBoxClick() {
+		this.setState({
+			isClicked: true,
+			isVisable:false
+		})
+		console.log("i've been clicked")
+	}
+	renderProfileBox() {
+		if(this.state.isClicked === true) {
+			return(
+				<div>
+					<ProfileBox />
+    		</div>
+			)
+		}
+	}
+	renderProfileBoxOff() {
+		if(this.state.isClicked) {
+			return (
+				<div>
+					<h3 onClick={this.profileBoxOff.bind(this)}>X</h3>
+				</div>
+			)
+		}
+			console.log("close button clicked")
+	}
+	profileBoxOff() {
+		this.setState({
+			isClicked: false,
+			isVisable: true
+		})
 	}
 
 	render() {
@@ -18,14 +62,24 @@ export default class LandingPage extends Component {
           </div>
         </div>
         <div className="row">
-          <div className="col-sm-2 offset-sm-8 col-md-2 offset-md-8 col-lg-2 offset-lg-8">
-            <ProjectBox
-              imgSrc={BasicIcon}
-              title="ADU"
-              link="http://www.google.com"
-              style={styles.partial}
-            />
+          <div onClick={this.statusBoxClick.bind(this)} className="col-sm-2 offset-sm-8 col-md-2 offset-md-8 col-lg-2 offset-lg-8">
+            {this.renderProjectBox() &&
+							<ProjectBox
+	              imgSrc={BasicIcon}
+	              title="ADU"
+	              link="http://www.google.com"
+	              style={styles.partial}
+	            />
+						}
           </div>
+				</div>
+				<div className="row">
+					<div className="col-sm-8 offset-sm-3 col-md-8 offset-md-3 col-lg- offset-lg-3">
+     				{this.renderProfileBox() &&
+							<ProfileBox title="Helloo worlds"/>
+						}
+						{this.renderProfileBoxOff()}
+     			</div>
         </div>
 
         <div className="row">
@@ -36,8 +90,6 @@ export default class LandingPage extends Component {
             link="http://www.google.com"
             style={styles.complete}
 						/>
-
-
           </div>
           <div className="col-sm-2 col-md-2 col-lg-2" >
             <ProjectBox
@@ -46,7 +98,6 @@ export default class LandingPage extends Component {
             link="http://www.google.com"
             style={styles.partial}
             />
-
           </div>
         </div>
 
@@ -89,6 +140,7 @@ export default class LandingPage extends Component {
             title="GARDEN"
             link="http://www.google.com"
             style={styles.partial}
+						info="french style garden, need to fix permiter and build pagoda."
             />
 
           </div>
@@ -98,6 +150,7 @@ export default class LandingPage extends Component {
             title="MOUND"
             link="http://www.google.com"
             style={styles.broken}
+						info="this is a new type of tank with a smaller mound"
             />
 
           </div>

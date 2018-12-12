@@ -11,12 +11,19 @@ export default class ProjectBox extends Component {
 		}
 	}
 	renderStatusColor() {
-			return(
-				<div style={this.state.isHighlighted ? styles.styleHighlighted : this.props.style} onMouseOver={this.colorMouseOver.bind(this)}>
-          <img src={this.props.imgSrc} style={styles.imgStyle}/>
-        	<h3>{this.props.title}</h3>
-				</div>
+		return(
+			<div style={this.state.isHighlighted ? styles.styleHighlighted : this.props.style} onMouseOver={this.colorMouseOver.bind(this)}>
+				<img src={this.props.imgSrc} style={styles.imgStyle}/>
+				{this.renderProjectTitle()}
+			</div>
+		)
+	}
+	renderProjectTitle() {
+		if(!this.state.isHighlighted) {
+			return (
+				<h3>{this.props.title}</h3>
 			)
+		}
 	}
 	colorMouseOver() {
 		this.setState({
@@ -28,40 +35,11 @@ export default class ProjectBox extends Component {
 			isHighlighted:true
 		})
 	}
-
-	statusBoxClick() {
-		this.setState({
-			isClicked: true
-		})
-		console.log("i've been clicked")
-
-	}
-	profileBoxOff() {
-		this.setState({
-			isClicked: false
-		})
-			console.log("close button clicked")
-	}
-	renderProfileBox() {
-		if(this.state.isClicked === true) {
-			return(
-				<div>
-					<h3 onClick={this.profileBoxOff.bind(this)}>close</h3>
-					<img src={this.props.imgSrc} style={styles.imgStyle}/>
-					<h3>{this.props.title}</h3>
-					<h3>{this.props.status}</h3>
-    		</div>
-			)
-		}
-	}
 	render() {
 		return (
 			<div>
-				<div onClick={this.statusBoxClick.bind(this)} onMouseEnter={this.colorMouseOver.bind(this)} onMouseOut={this.colorMouseOut.bind(this)}>
+				<div onMouseEnter={this.colorMouseOver.bind(this)} onMouseOut={this.colorMouseOut.bind(this)}>
 					{this.renderStatusColor()}
-				</div>
-				<div>
-					{this.renderProfileBox()}
 				</div>
    		</div>
 		)
