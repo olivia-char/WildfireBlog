@@ -7,8 +7,9 @@ export default class LandingPage extends Component {
 	constructor(props){
 		super(props)
 		this.state = {
-			isClicked: false,
 			isVisable: true,
+			isClicked: false,
+			isClosed: false
 		}
 	}
 	renderProjectBox() {
@@ -63,24 +64,29 @@ export default class LandingPage extends Component {
         </div>
         <div className="row">
           <div onClick={this.statusBoxClick.bind(this)} className="col-sm-2 offset-sm-8 col-md-2 offset-md-8 col-lg-2 offset-lg-8">
-            {this.renderProjectBox() &&
+						{this.renderProjectBox() &&
 							<ProjectBox
-	              imgSrc={BasicIcon}
-	              title="ADU"
-	              link="http://www.google.com"
-	              style={styles.partial}
-	            />
+								imgSrc={BasicIcon}
+								title="ADU"
+								link="http://www.google.com"
+								style={styles.partial}
+							/>
 						}
           </div>
-				</div>
-				<div className="row">
-					<div className="col-sm-8 offset-sm-3 col-md-8 offset-md-3 col-lg- offset-lg-3">
-     				{this.renderProfileBox() &&
-							<ProfileBox title="Helloo worlds"/>
-						}
+					<div className="col-sm-4 offset-sm-8 col-md-4 offset-md-8 col-lg-4 offset-lg-8">
 						{this.renderProfileBoxOff()}
-     			</div>
-        </div>
+						{this.renderProfileBox() &&
+							<ProfileBox
+								title="The Coop' or Gnome Home - still in debate"
+								status="Incomplete"
+								highlights="Project Highlights"
+								interest="pictched roof"
+							/>
+
+						}
+					</div>
+				</div>
+
 
         <div className="row">
           <div className="col-sm-2 offset-sm-1 col-md-2 offset-md-1 col-lg-2 offset-lg-1">

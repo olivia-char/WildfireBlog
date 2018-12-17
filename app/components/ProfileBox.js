@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export default class ProfileBox extends Component {
 	constructor(props){
@@ -15,6 +15,10 @@ export default class ProfileBox extends Component {
         <img src={this.props.imgSrc} style={styles.imgStyle}/>
         <h3>{this.props.title}</h3>
         <h3>{this.props.status}</h3>
+				<h3>{this.props.highlights}</h3>
+				<ul>
+					<li><Link to="/blog">{this.props.interest}</Link></li>
+				</ul>
       </div>
     )
 	}
