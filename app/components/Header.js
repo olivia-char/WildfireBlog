@@ -12,13 +12,13 @@ export default class Header extends Component {
           <Link to="/"><h1>Rebuidling Froggy Oaks</h1></Link>
         </div>
         <div className="co-2 col-sm-2 col-md-2 col-lg-2">
-          <Link to="/blog">Our Story Blog</Link>
+          <Link to="/blog">Rebuilding Blog</Link>
         </div>
         <div className="co-2 col-sm-2 col-md-2 col-lg-2">
-          <Link to="/defense">Be Defensive</Link>
+          <Link to="/ourstory">Our Story</Link>
         </div>
-        <div className="co-2 col-sm-2 col-md-2 col-lg-2">
-          <Link to="/rebuild">Rebuilding Projects</Link>
+				<div className="co-2 col-sm-2 col-md-2 col-lg-2">
+          <Link to="/">Map</Link>
         </div>
 			</div>
 		)

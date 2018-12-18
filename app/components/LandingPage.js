@@ -62,13 +62,14 @@ export default class LandingPage extends Component {
 						  <h3>Rebuilding Progress Map</h3>
           </div>
         </div>
+
         <div className="row">
+
           <div onClick={this.statusBoxClick.bind(this)} className="col-sm-2 offset-sm-8 col-md-2 offset-md-8 col-lg-2 offset-lg-8">
 						{this.renderProjectBox() &&
 							<ProjectBox
 								imgSrc={BasicIcon}
 								title="ADU"
-								link="http://www.google.com"
 								style={styles.partial}
 							/>
 						}
@@ -80,16 +81,19 @@ export default class LandingPage extends Component {
 								title="The Coop' or Gnome Home - still in debate"
 								status="Incomplete"
 								highlights="Project Highlights"
-								interest="pictched roof"
+								interest="click here for more info"
+								redirect="/adu"
 							/>
 
 						}
 					</div>
+
 				</div>
 
 
         <div className="row">
-          <div className="col-sm-2 offset-sm-1 col-md-2 offset-md-1 col-lg-2 offset-lg-1">
+
+				  <div className="col-sm-2 offset-sm-1 col-md-2 offset-md-1 col-lg-2 offset-lg-1">
             <ProjectBox
             imgSrc={BasicIcon}
             title="SOLAR"
@@ -97,6 +101,7 @@ export default class LandingPage extends Component {
             style={styles.complete}
 						/>
           </div>
+
           <div className="col-sm-2 col-md-2 col-lg-2" >
             <ProjectBox
             imgSrc={BasicIcon}
@@ -105,18 +110,33 @@ export default class LandingPage extends Component {
             style={styles.partial}
             />
           </div>
+
         </div>
 
         <div className="row">
-          <div className="col-sm-2 offset-sm-5 col-md-2 offset-md-5 col-lg-2 offset-lg-5" >
-            <ProjectBox
-            imgSrc={BasicIcon}
-            title="HOUSE"
-            link="http://www.google.com"
-            style={styles.broken}
-            />
-
+          <div onClick={this.statusBoxClick.bind(this)} className="col-sm-2 offset-sm-5 col-md-2 offset-md-5 col-lg-2 offset-lg-5" >
+						{this.renderProjectBox() &&
+							<ProjectBox
+							imgSrc={BasicIcon}
+							title="HOUSE"
+							link="http://www.google.com"
+							style={styles.broken}
+							/>
+						}
           </div>
+					<div className="col-sm-4 offset-sm-8 col-md-4 offset-md-8 col-lg-4 offset-lg-8">
+						{this.renderProfileBoxOff()}
+						{this.renderProfileBox() &&
+							<ProfileBox
+								title="The Coop' or Gnome Home - still in debate"
+								status="Incomplete"
+								highlights="Project Highlights"
+								interest="click here for more info"
+								redirect="/adu"
+							/>
+
+						}
+					</div>
         </div>
 
         <div className="row">

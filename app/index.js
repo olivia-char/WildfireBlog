@@ -5,8 +5,12 @@ import { BrowserRouter as Router, Route, browserHistory, Switch, Link } from 're
 import App from './components/App';
 import LandingPage from './components/LandingPage';
 import Blog from './components/Blog';
-import Defense from './components/Defense';
-import Rebuild from './components/Rebuild';
+import Story from './components/Story';
+
+import AduProjects from './components/AduProjects'
+import MainHouseProjects from './components/MainHouseProjects'
+import PoolProjects from './components/PoolProjects'
+import LandscapingProjects from './components/LandscapingProjects'
 import './main.css';
 
 if (process.env.NODE_ENV !== 'production') {
@@ -19,10 +23,12 @@ const routes = (
 		<Switch>
 			 <Route exact path="/" component={LandingPage} />
 			 <Route path="/blog" component={Blog} />
-			 <Route path="/defense" component={Defense} />
-			 <Route path="/rebuild" component={Rebuild} />
+			 <Route path="/ourstory" component={Story} />
+			 <Route path="/adu" component={AduProjects} />
+			 <Route path="/mainhouse" component={MainHouseProjects} />
+			 <Route path="/pool" component={PoolProjects} />
+			 <Route path="/landscaping" component={LandscapingProjects} />
 	 </Switch>
-
  </div>
 
 )

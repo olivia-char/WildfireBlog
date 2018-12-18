@@ -17,7 +17,7 @@ export default class ProfileBox extends Component {
         <h3>{this.props.status}</h3>
 				<h3>{this.props.highlights}</h3>
 				<ul>
-					<li><Link to="/blog">{this.props.interest}</Link></li>
+					<li><Link to={this.props.redirect}>{this.props.interest}</Link></li>
 				</ul>
       </div>
     )
