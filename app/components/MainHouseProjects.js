@@ -3,6 +3,7 @@ import BlogBox from './BlogBox.js'
 
 import BasicIcon from '../assets/airbnb.png'
 
+
 export default class MainHouseProjects extends Component {
 	constructor(props){
 		super(props)
@@ -36,6 +37,6 @@ export default class MainHouseProjects extends Component {
 
 const styles = {
   Blog: {
-    backgroundColor: "blue"
+
   }
 }

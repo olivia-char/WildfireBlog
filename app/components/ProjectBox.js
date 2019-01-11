@@ -42,6 +42,7 @@ export default class ProjectBox extends Component {
 		if(this.state.isVisable === true) {
 			return(
 					<div>
+						{this.renderProfileBoxOff()}
 						<img src={this.props.imgSrc} style={styles.imgStyle}/>
 						<h3>{this.props.title}</h3>
 						<h3>{this.props.status}</h3>
@@ -50,7 +51,6 @@ export default class ProjectBox extends Component {
 							<li>{this.props.interest}</li>
 						</ul>
 						<Link to={this.props.redirect}>More ADU Projects</Link>
-						{this.renderProfileBoxOff()}
 					</div>
 			)
 		}
@@ -81,12 +81,15 @@ export default class ProjectBox extends Component {
 
 	render() {
 		return (
-			<div>
-				<div onMouseEnter={this.colorMouseOver.bind(this)} onMouseOut={this.colorMouseOut.bind(this)}>
+			<div className="row" onMouseEnter={this.colorMouseOver.bind(this)} onMouseOut={this.colorMouseOut.bind(this)}>
+				<div className="col-sm-10 col-md-10 col-lg-10">
 					{this.renderStatusColor()}
+				</div>
+				<div className="col-sm-12 col-md-12 col-lg-12">
 					{this.renderProfileBox()}
 				</div>
-   		</div>
+			</div>
+
 		)
 	}
 }

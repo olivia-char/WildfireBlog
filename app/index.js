@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import { BrowserRouter as Router, Route, browserHistory, Switch, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, History, Switch, Link } from 'react-router-dom'
 
 import App from './components/App';
 import LandingPage from './components/LandingPage';
@@ -30,11 +30,11 @@ const routes = (
 			 <Route path="/landscaping" component={LandscapingProjects} />
 	 </Switch>
  </div>
-
 )
 
+
 ReactDom.render(
-	<Router history={browserHistory}>
+	<Router>
 		{routes}
 	</Router>,
 	document.getElementById('app')

@@ -36,6 +36,6 @@ export default class PoolProjects extends Component {
 
 const styles = {
   Blog: {
-    backgroundColor: "blue"
+    
   }
 }

@@ -36,6 +36,6 @@ export default class LandscapingProjects extends Component {
 
 const styles = {
   Blog: {
-    backgroundColor: "blue"
+  
   }
 }

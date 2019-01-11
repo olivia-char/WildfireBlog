@@ -51,7 +51,7 @@ export default class BlogBox extends Component {
 
 const styles = {
   BlogBox: {
-    backgroundColor:"purple",
+    backgroundColor:"grey",
     margin: "5%",
   },
   imgStyle: {

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import ProjectBox from './ProjectBox'
 import BackgroundImg from '../assets/rock.jpg'
 import BasicIcon from '../assets/airbnb.png'
+
 export default class LandingPage extends Component {
 	constructor(props){
 		super(props)
@@ -10,72 +11,61 @@ export default class LandingPage extends Component {
 
 	render() {
 		return (
+
       <div style={styles.background}>
         <div className="row">
           <div className="col-12 col-sm-12 col-md-12 col-lg-12">
 						  <h3>Rebuilding Progress Map</h3>
           </div>
         </div>
-
         <div className="row">
           <div className="col-sm-2 offset-sm-8 col-md-2 offset-md-8 col-lg-2 offset-lg-8">
-
-							<ProjectBox
-								imgSrc={BasicIcon}
-								title="ADU"
-								status="Incomplete"
-								interest="Pitched Roof"
-								redirect="/blog"
-								style={styles.partial}
-							/>
-
-          </div>
+						<ProjectBox
+							imgSrc={BasicIcon}
+							title="ADU"
+							status="Incomplete"
+							interest="Pitched Roof"
+							redirect="/adu"
+							style={styles.partial}
+						/>
+        	</div>
 				</div>
-
         <div className="row">
-
 				  <div className="col-sm-2 offset-sm-1 col-md-2 offset-md-1 col-lg-2 offset-lg-1">
             <ProjectBox
             imgSrc={BasicIcon}
             title="SOLAR"
-            redirect="/blog"
+            redirect="/pool"
             style={styles.complete}
 						/>
           </div>
-
           <div className="col-sm-2 col-md-2 col-lg-2" >
             <ProjectBox
             imgSrc={BasicIcon}
             title="POOL"
-            redirect="/blog"
+            redirect="/pool"
             style={styles.partial}
-
             />
           </div>
-
         </div>
-
         <div className="row">
-          <div  className="col-sm-2 offset-sm-5 col-md-2 offset-md-5 col-lg-2 offset-lg-5" >
-							<ProjectBox
+          <div className="col-sm-2 offset-sm-5 col-md-2 offset-md-5 col-lg-2 offset-lg-5" >
+						<ProjectBox
 							imgSrc={BasicIcon}
 							title="HOUSE"
-							redirect="/blog"
+							redirect="/mainhouse"
 							style={styles.broken}
-							/>
+						/>
           </div>
-
         </div>
-
         <div className="row">
           <div className="col-sm-2 offset-sm-8 col-md-2 offset-md-8 col-lg-2 offset-lg-8">
             <ProjectBox
             imgSrc={BasicIcon}
             title="WIND"
-            redirect="/blog"
+            redirect="/landscaping"
             style={styles.broken}
             />
-
           </div>
         </div>
         <div className="row">
@@ -83,30 +73,27 @@ export default class LandingPage extends Component {
             <ProjectBox
             imgSrc={BasicIcon}
             title="WATER"
-            redirect="/blog"
+            redirect="/landscaping"
             style={styles.complete}
             />
-
           </div>
           <div className="col-sm-2 offset-sm-2 col-md-2 offset-md-2 col-lg-2 offset-lg-2">
             <ProjectBox
             imgSrc={BasicIcon}
             title="GARDEN"
-            redirect="/blog"
+            redirect="/landscaping"
             style={styles.partial}
 						info="french style garden, need to fix permiter and build pagoda."
             />
-
           </div>
           <div className="col-sm-2 offset-sm-1 col-md-2 offset-md-1 col-lg-2 offset-lg-1" >
             <ProjectBox
             imgSrc={BasicIcon}
             title="MOUND"
-            redirect="/blog"
+            redirect="/landscaping"
             style={styles.broken}
 						info="this is a new type of tank with a smaller mound"
             />
-
           </div>
         </div>
       </div>
