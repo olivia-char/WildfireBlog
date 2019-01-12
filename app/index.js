@@ -24,10 +24,6 @@ const routes = (
 			 <Route exact path="/" component={LandingPage} />
 			 <Route path="/blog" component={Blog} />
 			 <Route path="/ourstory" component={Story} />
-			 <Route path="/adu" component={AduProjects} />
-			 <Route path="/mainhouse" component={MainHouseProjects} />
-			 <Route path="/pool" component={PoolProjects} />
-			 <Route path="/landscaping" component={LandscapingProjects} />
 	 </Switch>
  </div>
 )

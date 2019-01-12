@@ -94,11 +94,11 @@ export default class ProjectBox extends Component {
 	render() {
 		return (
 			<div className="row" onMouseEnter={this.colorMouseOver.bind(this)} onMouseOut={this.colorMouseOut.bind(this)}>
+				<div className="col-sm-12 col-md-12 col-lg-12" style={styles.ProfileBox}>
+					{this.renderProfileBox()}
+				</div>
 				<div className="col-sm-6 col-md-6 col-lg-6" style={styles.StatusBox}>
 					{this.renderStatusColor()}
-				</div>
-				<div className="col-sm-12 col-md-12 col-lg-12">
-					{this.renderProfileBox()}
 				</div>
 			</div>
 
@@ -124,6 +124,8 @@ const styles = {
 		padding: "2% 0% 5% 0%"
 	},
 	StatusBox: {
-		height: "150px"
-	}
+		height: "150px",
+		marginBottom: "2%"
+	},
+
 }

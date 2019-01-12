@@ -9,7 +9,10 @@ export default class LandscapingProjects extends Component {
 	}
 	render() {
 		return (
-			<div className="row" style={styles.Blog}>
+			<div className="row">
+			<div className="col-12 col-sm-12 col-md-12 col-lg-12" style={styles.Blog}>
+				<h2>Froggy Oaks Landscaping Projects</h2>
+			</div>
       <div className="col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
         <BlogBox
           title="Concrete Pavers EVERYWHERE!"
@@ -36,6 +39,8 @@ export default class LandscapingProjects extends Component {
 
 const styles = {
   Blog: {
-  
+		padding: "2%",
+		textAlign: "center",
+		fontFamily: "Courier"
   }
 }
