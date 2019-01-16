@@ -32,6 +32,7 @@ const styles = {
 	HeaderBackground: {
 		padding: "2%",
 		fontFamily: "CountrySide",
+		borderBottom: "1px solid green"
 	},
 	HeaderBox: {
 		padding: "0% 0% 0% 4%"

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Slider from "react-slick";
+
+import BasicIcon from '../assets/airbnb.png'
 
 export default class ProjectBox extends Component {
 	constructor(props){
@@ -15,11 +17,11 @@ export default class ProjectBox extends Component {
 		if(this.state.isVisable === false){
 			return(
 				<div className="row" style={this.state.isHighlighted ? styles.styleHighlighted : this.props.style} onMouseOver={this.colorMouseOver.bind(this)} onClick={this.projectBoxClick.bind(this)} >
-					<div className="col-12 col-sm-12 col-md-12 col-lg-12">
+					<div className="col-sm-12 col-md-12 col-lg-12">
 						<img src={this.props.imgSrc} style={styles.imgStyle}/>
 					</div>
-					<div className="col-12 col-sm-12 col-md-12 col-lg-12">
-							{this.renderProjectTitle()}
+					<div className="col-sm-12 col-md-12 col-lg-12">
+						{this.renderProjectTitle()}
 					</div>
 				</div>
 			)
@@ -28,7 +30,7 @@ export default class ProjectBox extends Component {
 	renderProjectTitle() {
 		if(!this.state.isHighlighted) {
 			return (
-				<h3 style={styles.ProjectTitle}>{this.props.title}</h3>
+				<h4 style={styles.ProjectTitle}>{this.props.title}</h4>
 			)
 		}
 	}
@@ -44,11 +46,35 @@ export default class ProjectBox extends Component {
 	}
 	renderProfileBox() {
 		if(this.state.isVisable === true) {
+			const settings = {
+			 dots: true,
+			 infinite: true,
+			 speed: 500,
+			 slidesToShow: 1,
+			 slidesToScroll: 1,
+			 autoPlay: false,
+
+		 };
 			return(
 					<div className="row" style={styles.background}>
+						<div className="col-1 col-sm-1 offset-sm-10 col-md-1 offset-md-10 col-lg-1 offset-lg-10">
 						{this.renderProfileBoxOff()}
-						<div className="col-8 col-sm-8 offset-sm-1 col-md-8 offset-md-1 col-lg-8 offset-lg-1">
-								<img src={this.props.imgSrc} style={styles.imgStyle}/>
+						</div>
+						<div className="col-12 col-sm-12 col-md-12 col-lg-12" style={styles.blah}>
+							<Slider {...settings} className="row">
+								<div className="col-12 col-sm-12 col-md-12 col-lg-12">
+									<img src={this.props.imgSlide1} />
+								</div>
+								<div className="col-12 col-sm-12 col-md-12 col-lg-12">
+									<img src={this.props.imgSlide2} />
+								</div>
+								<div className="col-12 col-sm-12 col-md-12 col-lg-12">
+									<img src={this.props.imgSlide3} />
+								</div>
+							<div className="col-12 col-sm-12 col-md-12 col-lg-12">
+									<img src={this.props.imgSlide4} />
+								</div>
+							</Slider>
 						</div>
 						<div className="col-12 col-sm-12 col-md-12 col-lg-12">
 							<h3>{this.props.title}</h3>
@@ -57,9 +83,9 @@ export default class ProjectBox extends Component {
 							<h3>{this.props.status}</h3>
 						</div>
 						<div className="col-12 col-sm-12 col-md-12 col-lg-12">
-							<h3>Highlights - </h3>
+							<h3>- Highlights -</h3>
 							<ul>
-								<li>{this.props.interest}</li>
+								<li><p>{this.props.interest}</p></li>
 							</ul>
 							<Link to={this.props.redirect}>More ADU Projects</Link>
 						</div>
@@ -77,8 +103,8 @@ export default class ProjectBox extends Component {
 	renderProfileBoxOff() {
 		if(this.state.isClicked) {
 			return (
-				<div style={styles.noMove}>
-					<h3 onClick={this.profileBoxOff.bind(this)}>X</h3>
+				<div style={styles.exitBox} >
+					<h5 onClick={this.profileBoxOff.bind(this)}>X</h5>
 				</div>
 			)
 		}
@@ -94,10 +120,10 @@ export default class ProjectBox extends Component {
 	render() {
 		return (
 			<div className="row" onMouseEnter={this.colorMouseOver.bind(this)} onMouseOut={this.colorMouseOut.bind(this)}>
-				<div className="col-sm-12 col-md-12 col-lg-12" style={styles.ProfileBox}>
+				<div className="col-sm-12 col-md-12 col-lg-12">
 					{this.renderProfileBox()}
 				</div>
-				<div className="col-sm-6 col-md-6 col-lg-6" style={styles.StatusBox}>
+				<div className="col-sm-6 offset-sm-3 col-md-6 offset-md-3 col-lg-6 offset-lg-3" style={styles.StatusBox}>
 					{this.renderStatusColor()}
 				</div>
 			</div>
@@ -115,17 +141,28 @@ const styles = {
 		margin:"5% 0% 5% 0%",
 	},
 	background: {
-		backgroundColor: "grey",
-		padding: "5%",
+		backgroundColor: "white",
 		textAlign:"center",
-		margin: "1%",
+		margin: "0% 4% 0% 4%",
+		fontFamily: "courier"
 	},
 	ProjectTitle: {
-		padding: "2% 0% 5% 0%"
+		padding: "2% 0% 5% 0%",
+		fontFamily: "courier"
 	},
 	StatusBox: {
 		height: "150px",
-		marginBottom: "2%"
+		marginBottom: "2%",
+	},
+	popUpTitle: {
+		margin: "0% 2% 0% 2%",
+	},
+	exitBox: {
+		color:"green",
+		margin: "2% 0% 2% 0%"
+	},
+	blah: {
+		marginBottom: "10%",
 	},
 
 }

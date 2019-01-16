@@ -24,6 +24,7 @@ const routes = (
 			 <Route exact path="/" component={LandingPage} />
 			 <Route path="/blog" component={Blog} />
 			 <Route path="/ourstory" component={Story} />
+			 <Route path="/adu" component={AduProjects} />
 	 </Switch>
  </div>
 )
