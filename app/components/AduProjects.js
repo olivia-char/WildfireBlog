@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BlogBox from './BlogBox.js'
-
+import BlogHeader from './BlogHeader.js'
 import BasicIcon from '../assets/airbnb.png'
 
 export default class AduProjects extends Component {
@@ -12,6 +12,9 @@ export default class AduProjects extends Component {
 			<div className="row">
 				<div className="col-12 col-sm-12 col-md-12 col-lg-12" style={styles.Blog}>
 					<h2>Froggy Oaks ADU Projects</h2>
+				</div>
+				<div className="col-12 col-sm-12 col-md-12 col-lg-12">
+					<BlogHeader />
 				</div>
 	      <div className="col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
 	        <BlogBox

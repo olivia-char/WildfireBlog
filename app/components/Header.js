@@ -12,16 +12,16 @@ export default class Header extends Component {
 		return (
 			<div className="row" style={styles.HeaderBackground}>
         <div className="co-6 col-sm-6 col-md-6 col-lg-6" style={styles.HeaderBox}>
-          <Link to="/" style={styles.HeaderTitle}><h1>Rebuidling Froggy Oaks</h1></Link>
+          <h1><Link to="/" style={styles.HeaderTitle}>Rebuidling Froggy Oaks</Link></h1>
         </div>
 				<div className="co-2 col-sm-2 col-md-2 col-lg-2" style={styles.LinkBackground}>
-					<Link to="/ourstory" style={styles.LinkTitle}>Our Story</Link>
+					<h4><Link to="/our_story" style={styles.LinkTitle}>Our Story</Link></h4>
 				</div>
 				<div className="co-2 col-sm-2 col-md-2 col-lg-2" style={styles.LinkBackground}>
-					<Link to="/blog" style={styles.LinkTitle}>Rebuilding Blog</Link>
+					<h4><Link to="/rebuilding_blog" style={styles.LinkTitle}>Rebuilding Blog</Link></h4>
 				</div>
 				<div className="co-2 col-sm-2 col-md-2 col-lg-2" style={styles.LinkBackground}>
-					<Link to="/" style={styles.LinkTitle}>Map</Link>
+					<h4><Link to="/" style={styles.LinkTitle}>Map</Link></h4>
 				</div>
 			</div>
 		)
@@ -30,23 +30,24 @@ export default class Header extends Component {
 
 const styles = {
 	HeaderBackground: {
-		padding: "2%",
-		fontFamily: "CountrySide",
-		borderBottom: "1px solid green"
+		padding: "3%",
+		fontFamily: "Mellony",
+		borderBottom: "1px solid green",
+		backgroundColor: "#82AC9F"
 	},
 	HeaderBox: {
 		padding: "0% 0% 0% 4%"
 	},
 	HeaderTitle: {
 		textDecoration: "none",
-		color: "green"
+		color: "#FCF7F8"
 	},
 	LinkBackground: {
 		marginTop: "1%",
 		textAlign: "center"
 	},
 	LinkTitle: {
-		color: "black"
+		color: "#FCF7F8"
 
 	}
 }

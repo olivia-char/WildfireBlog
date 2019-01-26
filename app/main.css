@@ -2,8 +2,19 @@
   font-family: CountrySide;
   src: url("./assets/Countryside.ttf");
 }
-
+@font-face {
+  font-family: JaneAustin;
+  src: url("./assets/JaneAustin.ttf");
+}
+@font-face {
+  font-family: Rustico;
+  src: url("./assets/Rustico-Regular.otf");
+}
+@font-face {
+  font-family: Mellony;
+  src: url("./assets/mellonyDryBrush.ttf");
+}
 p {
   font-size: 16px;
-  font-family: helvetica
+  font-family: courier
 }

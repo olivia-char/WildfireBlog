@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import ProjectBox from './ProjectBox'
-
+import Header from './Header.js'
 import BasicIcon from '../assets/airbnb.png'
 import Compass from '../assets/compass.png'
 import BasicImage from '../assets/compass.png'
@@ -14,6 +14,7 @@ export default class LandingPage extends Component {
 	render() {
 		return (
       <div style={styles.background}>
+	
         <div className="row" style={styles.MapTitle}>
           <div className="col-3 col-sm-3 offset-sm-2 col-md-3 offset-md-2 col-lg-3 offset-lg-2">
 						  <h3>Sonoma County</h3>
@@ -33,8 +34,10 @@ export default class LandingPage extends Component {
 						imgSlide2={BasicImage}
 						imgSlide3={BasicImage}
 						imgSlide4={BasicImage}
-						title="MOUND"
-						redirect="/landscaping"
+						title="Mound"
+						status="Incomplete"
+						interest="Pitched Roof"
+						redirect="/gnome_home_projects"
 						style={styles.broken}
 						info="this is a new type of tank with a smaller mound"
 						/>
@@ -46,21 +49,25 @@ export default class LandingPage extends Component {
 						imgSlide2={BasicImage}
 						imgSlide3={BasicImage}
 						imgSlide4={BasicImage}
-						title="GARDEN"
-						redirect="/landscaping"
+						title="Garden"
+						status="Incomplete"
+						interest="Pitched Roof"
+						redirect="/landscaping_projects"
 						style={styles.partial}
 						info="french style garden, need to fix permiter and build pagoda."
 						/>
           </div>
-          <div className="col-sm-3 col-md-3 col-lg-3" >
+          <div className="col-sm-3 col-md-3 col-lg-3">
 						<ProjectBox
 						imgSrc={BasicIcon}
 						imgSlide1={BasicImage}
 						imgSlide2={BasicImage}
 						imgSlide3={BasicImage}
 						imgSlide4={BasicImage}
-						title="WATER"
-						redirect="/landscaping"
+						title="Water Tower"
+						status="Incomplete"
+						interest="Pitched Roof"
+						redirect="/main_house_projects"
 						style={styles.complete}
 						/>
           </div>
@@ -73,8 +80,10 @@ export default class LandingPage extends Component {
 						imgSlide2={BasicImage}
 						imgSlide3={BasicImage}
 						imgSlide4={BasicImage}
-						title="WIND"
-						redirect="/landscaping"
+						title="Wind Mill"
+						status="Incomplete"
+						interest="Pitched Roof"
+						redirect="/landscaping_projects"
 						style={styles.broken}
 						/>
           </div>
@@ -85,8 +94,10 @@ export default class LandingPage extends Component {
 							imgSlide2={BasicImage}
 							imgSlide3={BasicImage}
 							imgSlide4={BasicImage}
-							title="HOUSE"
-							redirect="/mainhouse"
+							title="Main House"
+							status="Incomplete"
+							interest="Pitched Roof"
+							redirect="/main_house_projects"
 							style={styles.broken}
 						/>
           </div>
@@ -99,8 +110,10 @@ export default class LandingPage extends Component {
 						imgSlide2={BasicImage}
 						imgSlide3={BasicImage}
 						imgSlide4={BasicImage}
-						title="POOL"
-						redirect="/pool"
+						title="Pool"
+						status="Incomplete"
+						interest="Pitched Roof"
+						redirect="/pool_projects"
 						style={styles.partial}
 						/>
           </div>
@@ -111,8 +124,10 @@ export default class LandingPage extends Component {
 						imgSlide2={BasicImage}
 						imgSlide3={BasicImage}
 						imgSlide4={BasicImage}
-						title="SOLAR"
-						redirect="/pool"
+						title="Solar Array"
+						status="Incomplete"
+						interest="Pitched Roof"
+						redirect="/landscaping_projects"
 						style={styles.complete}
 						/>
 					</div>
@@ -125,10 +140,10 @@ export default class LandingPage extends Component {
 							imgSlide2={BasicImage}
 							imgSlide3={BasicImage}
 							imgSlide4={BasicImage}
-							title="ADU"
+							title="Gnome Home"
 							status="Incomplete"
 							interest="Pitched Roof"
-							redirect="/adu"
+							redirect="/gnome_home_projects"
 							style={styles.partial}
 						/>
           </div>
@@ -139,7 +154,7 @@ export default class LandingPage extends Component {
 }
 const styles = {
   background: {
-    backgroundColor: "lightGreen",
+
 		padding: "3% 0% 5% 0%",
   },
 	MapTitle: {
@@ -150,7 +165,7 @@ const styles = {
 	},
 	MapCompass: {
 		width: "60px",
-		transform: "rotate(270deg)",
+		transform: "rotate(315deg)",
 	},
 	MapRow: {
 		margin: "0% 0% 5% 0%"
@@ -159,17 +174,17 @@ const styles = {
 		textAlign: "center"
 	},
   complete: {
-    boxShadow: "0px 0px 0px 2px green",
+    boxShadow: "0px 0px 0px 5px green",
     borderRadius: "50%",
     textAlign:"center",
   },
   partial: {
-    boxShadow: "0px 0px 0px 2px orange",
+    boxShadow: "0px 0px 0px 5px orange",
     borderRadius: "50%",
     textAlign:"center",
   },
   broken: {
-    boxShadow: "0px 0px 0px 2px red",
+    boxShadow: "0px 0px 0px 5px red",
     borderRadius: "50%",
     textAlign:"center",
   },

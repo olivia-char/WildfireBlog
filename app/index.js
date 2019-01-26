@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import { BrowserRouter as Router, Route, History, Switch, Link } from 'react-router-dom'
+import { HashRouter as Router, Route, Link } from 'react-router-dom'
+import { Switch } from 'react-router'
 
 import App from './components/App';
 import LandingPage from './components/LandingPage';
 import Blog from './components/Blog';
 import Story from './components/Story';
+import AduProjects from './components/AduProjects';
+import MainHouseProjects from './components/MainHouseProjects';
+import PoolProjects from './components/PoolProjects';
+import LandscapingProjects from './components/LandscapingProjects';
 
-import AduProjects from './components/AduProjects'
-import MainHouseProjects from './components/MainHouseProjects'
-import PoolProjects from './components/PoolProjects'
-import LandscapingProjects from './components/LandscapingProjects'
 import './main.css';
 
 if (process.env.NODE_ENV !== 'production') {
@@ -22,9 +23,12 @@ const routes = (
 		<Route component={App} />
 		<Switch>
 			 <Route exact path="/" component={LandingPage} />
-			 <Route path="/blog" component={Blog} />
-			 <Route path="/ourstory" component={Story} />
-			 <Route path="/adu" component={AduProjects} />
+			 <Route path="/rebuilding_blog" component={Blog} />
+			 <Route path="/our_story" component={Story} />
+			 <Route path="/gnome_home_projects" component={AduProjects} />
+			 <Route path="/main_house_projects" component={MainHouseProjects} />
+			 <Route path="/pool_projects" component={PoolProjects} />
+			 <Route path="/landscaping_projects" component={LandscapingProjects} />
 	 </Switch>
  </div>
 )

@@ -4,6 +4,7 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../main.css';
 
 import Header from './Header.js'
+import LandingPage from './LandingPage.js'
 
 export default class App extends Component {
 	constructor(props){
@@ -13,6 +14,7 @@ export default class App extends Component {
 		return (
 			<div >
 				<Header />
+				
 				{this.props.children}
 			</div>
 

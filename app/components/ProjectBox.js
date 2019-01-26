@@ -63,7 +63,7 @@ export default class ProjectBox extends Component {
 						<div className="col-12 col-sm-12 col-md-12 col-lg-12" style={styles.blah}>
 							<Slider {...settings} className="row">
 								<div className="col-12 col-sm-12 col-md-12 col-lg-12">
-									<img src={this.props.imgSlide1} />
+									<img style={styles.projectBoxStyle} src={this.props.imgSlide1} />
 								</div>
 								<div className="col-12 col-sm-12 col-md-12 col-lg-12">
 									<img src={this.props.imgSlide2} />
@@ -76,18 +76,18 @@ export default class ProjectBox extends Component {
 								</div>
 							</Slider>
 						</div>
-						<div className="col-12 col-sm-12 col-md-12 col-lg-12">
+						<div className="col-12 col-sm-12 col-md-12 col-lg-12" style={styles.ProfileBoxTitle}>
 							<h3>{this.props.title}</h3>
 						</div>
 						<div className="col-12 col-sm-12 col-md-12 col-lg-12">
-							<h3>{this.props.status}</h3>
+							<h5>{this.props.status}</h5>
 						</div>
 						<div className="col-12 col-sm-12 col-md-12 col-lg-12">
-							<h3>- Highlights -</h3>
+							<h4>- Highlights -</h4>
 							<ul>
 								<li><p>{this.props.interest}</p></li>
 							</ul>
-							<Link to={this.props.redirect}>More ADU Projects</Link>
+							<Link to={this.props.redirect}>Click Here for Projects</Link>
 						</div>
 					</div>
 			)
@@ -144,11 +144,11 @@ const styles = {
 		backgroundColor: "white",
 		textAlign:"center",
 		margin: "0% 4% 0% 4%",
-		fontFamily: "courier"
+		fontFamily: "Courier",
 	},
 	ProjectTitle: {
 		padding: "2% 0% 5% 0%",
-		fontFamily: "courier"
+		fontFamily: "Mellony"
 	},
 	StatusBox: {
 		height: "150px",
@@ -164,5 +164,10 @@ const styles = {
 	blah: {
 		marginBottom: "10%",
 	},
-
+	projectBoxStyle: {
+		width: "100%"
+	},
+	ProfileBoxTitle: {
+		fontFamily: "Mellony"
+	}
 }
