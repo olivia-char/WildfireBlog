@@ -1,20 +1,39 @@
-@font-face {
-  font-family: CountrySide;
-  src: url("./assets/Countryside.ttf");
-}
-@font-face {
-  font-family: JaneAustin;
-  src: url("./assets/JaneAustin.ttf");
-}
-@font-face {
-  font-family: Rustico;
-  src: url("./assets/Rustico-Regular.otf");
-}
+
 @font-face {
   font-family: Mellony;
   src: url("./assets/mellonyDryBrush.ttf");
 }
 p {
   font-size: 16px;
-  font-family: courier
+  font-family: courier;
+}
+.Link_Title {
+  color: #E8E9F3;
+  text-decoration: none;
+}
+.Link_Title:hover {
+  color: #C9B1BD;
+  text-decoration: none;
+  font-size: 22px;
+}
+.Blog_Link_Title {
+  color: #E8E9F3;
+  text-decoration: none;
+}
+.Blog_Link_Title:hover {
+  color: #C9B1BD;
+  text-decoration: none;
+  font-size: 25px;
+}
+.Blog_Button {
+  font-family: Mellony;
+  text-align: center;
+  margin-top: 2%;
+}
+.Blog_Button:hover {
+  font-family: Mellony;
+  text-align: center;
+  color: #E8E9F3;
+  margin-top: 2%;
+  font-size: 25px;
 }

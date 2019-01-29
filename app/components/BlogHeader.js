@@ -9,17 +9,17 @@ export default class Story extends Component {
 	render() {
 		return (
       <div className="row" style={styles.HeaderBackground}>
-        <div className="co-2 col-sm-2 col-md-2 col-lg-2" style={styles.LinkBackground}>
-          <Link to="#/gnome_home_projects" style={styles.LinkTitle}>Gnome Home Projects</Link>
+      <div className="co-2 col-sm-2 col-md-2 col-lg-2" style={styles.LinkBackground}>
+          <h3><Link to="/gnome_home_projects" replace className="Blog_Link_Title">Gnome Home Projects</Link></h3>
         </div>
         <div className="co-2 col-sm-2 col-md-2 col-lg-2" style={styles.LinkBackground}>
-          <Link to="#/main_house_projects" style={styles.LinkTitle}>Main House Projects</Link>
+        	<h3><Link to="/main_house_projects" replace className="Blog_Link_Title">Main House Projects</Link></h3>
         </div>
         <div className="co-2 col-sm-2 col-md-2 col-lg-2" style={styles.LinkBackground}>
-          <Link to="#/pool_projects" style={styles.LinkTitle}>Pool Projects</Link>
+          <h3><Link to="/pool_projects" replace className="Blog_Link_Title">Pool &amp; Patio Projects</Link></h3>
         </div>
         <div className="co-2 col-sm-2 col-md-2 col-lg-2" style={styles.LinkBackground}>
-          <Link to="#/landscaping_projects" style={styles.LinkTitle}>Landscaping Projects</Link>
+          <h3><Link to="/landscaping_projects" replace className="Blog_Link_Title">Landscaping Projects</Link></h3>
         </div>
       </div>
 		)
@@ -28,16 +28,16 @@ export default class Story extends Component {
 
 const styles = {
 	HeaderBackground: {
-		padding: "2%",
 		fontFamily: "Mellony",
-		borderBottom: "1px solid green"
+		backgroundColor: "#E4E3D3",
+		borderBottom:"2px solid #6D9F71",
 	},
 	LinkBackground: {
-		marginTop: "1%",
-		textAlign: "center"
+		backgroundColor: "#788AA3",
+		border: "1px solid #666A86",
+		textAlign: "center",
+		padding: "5% 2% 5% 2%",
+		margin: "3% 1% 3% 6%"
 	},
-	LinkTitle: {
-		color: "black"
 
-	}
 }

@@ -18,7 +18,7 @@ export default class ProjectBox extends Component {
 			return(
 				<div className="row" style={this.state.isHighlighted ? styles.styleHighlighted : this.props.style} onMouseOver={this.colorMouseOver.bind(this)} onClick={this.projectBoxClick.bind(this)} >
 					<div className="col-sm-12 col-md-12 col-lg-12">
-						<img src={this.props.imgSrc} style={styles.imgStyle}/>
+						<img src={this.props.imgSrc} style={styles.imgStyle} />
 					</div>
 					<div className="col-sm-12 col-md-12 col-lg-12">
 						{this.renderProjectTitle()}
@@ -30,7 +30,7 @@ export default class ProjectBox extends Component {
 	renderProjectTitle() {
 		if(!this.state.isHighlighted) {
 			return (
-				<h4 style={styles.ProjectTitle}>{this.props.title}</h4>
+				<h5 style={styles.ProjectTitle}>{this.props.title}</h5>
 			)
 		}
 	}
@@ -53,40 +53,42 @@ export default class ProjectBox extends Component {
 			 slidesToShow: 1,
 			 slidesToScroll: 1,
 			 autoPlay: false,
-
+			 arrows: false
 		 };
 			return(
 					<div className="row" style={styles.background}>
-						<div className="col-1 col-sm-1 offset-sm-10 col-md-1 offset-md-10 col-lg-1 offset-lg-10">
-						{this.renderProfileBoxOff()}
+						<div className="col-1 col-sm-1 offset-sm-10 col-md-1 offset-md-10 col-lg-1 offset-lg-10" style={styles.exitBox}>
+							{this.renderProfileBoxOff()}
 						</div>
 						<div className="col-12 col-sm-12 col-md-12 col-lg-12" style={styles.blah}>
 							<Slider {...settings} className="row">
 								<div className="col-12 col-sm-12 col-md-12 col-lg-12">
-									<img style={styles.projectBoxStyle} src={this.props.imgSlide1} />
+									<img src={this.props.imgSlide1} style={styles.projectBoxStyle} />
 								</div>
 								<div className="col-12 col-sm-12 col-md-12 col-lg-12">
-									<img src={this.props.imgSlide2} />
+									<img src={this.props.imgSlide2}  style={styles.projectBoxStyle}/>
 								</div>
 								<div className="col-12 col-sm-12 col-md-12 col-lg-12">
-									<img src={this.props.imgSlide3} />
+									<img src={this.props.imgSlide3}  style={styles.projectBoxStyle}/>
 								</div>
-							<div className="col-12 col-sm-12 col-md-12 col-lg-12">
-									<img src={this.props.imgSlide4} />
+							<div className="col-12 col-sm-12 col-md-12 col-lg-12" >
+									<img src={this.props.imgSlide4} style={styles.projectBoxStyle}/>
 								</div>
 							</Slider>
 						</div>
 						<div className="col-12 col-sm-12 col-md-12 col-lg-12" style={styles.ProfileBoxTitle}>
-							<h3>{this.props.title}</h3>
+							<h2>{this.props.title}</h2>
 						</div>
 						<div className="col-12 col-sm-12 col-md-12 col-lg-12">
-							<h5>{this.props.status}</h5>
+							<p>- {this.props.status} -</p>
 						</div>
-						<div className="col-12 col-sm-12 col-md-12 col-lg-12">
-							<h4>- Highlights -</h4>
+						<div className="col-10 col-sm-10 offset-sm-1 col-md-10 offset-md-1 col-lg-12 offset-lg-1" style={styles.ProfileBoxHighlight}>
+							<h4>Highlights:</h4>
 							<ul>
-								<li><p>{this.props.interest}</p></li>
+								<li>{this.props.interest}</li>
 							</ul>
+						</div>
+						<div className="col-12 col-sm-12 col-md-12 col-lg-12" style={styles.ProfileBoxLink}>
 							<Link to={this.props.redirect}>Click Here for Projects</Link>
 						</div>
 					</div>
@@ -103,7 +105,7 @@ export default class ProjectBox extends Component {
 	renderProfileBoxOff() {
 		if(this.state.isClicked) {
 			return (
-				<div style={styles.exitBox} >
+				<div>
 					<h5 onClick={this.profileBoxOff.bind(this)}>X</h5>
 				</div>
 			)
@@ -120,7 +122,7 @@ export default class ProjectBox extends Component {
 	render() {
 		return (
 			<div className="row" onMouseEnter={this.colorMouseOver.bind(this)} onMouseOut={this.colorMouseOut.bind(this)}>
-				<div className="col-sm-12 col-md-12 col-lg-12">
+				<div className="col-sm-12 col-md-12 col-lg-12" style={styles.box}>
 					{this.renderProfileBox()}
 				</div>
 				<div className="col-sm-6 offset-sm-3 col-md-6 offset-md-3 col-lg-6 offset-lg-3" style={styles.StatusBox}>
@@ -132,34 +134,36 @@ export default class ProjectBox extends Component {
 	}
 }
 const styles = {
+
 	styleHighlighted: {
 		textAlign:"center",
     borderRadius: "50%",
+		padding: "5%",
+		width: "200px",
+		height: "100%"
 	},
 	imgStyle: {
-		width:"100%",
-		margin:"5% 0% 5% 0%",
+		width: "100%",
+		height: "175px"
 	},
 	background: {
-		backgroundColor: "white",
+		backgroundColor:"#8B94A3",
 		textAlign:"center",
 		margin: "0% 4% 0% 4%",
 		fontFamily: "Courier",
+		color: "#E8E9F3"
 	},
 	ProjectTitle: {
 		padding: "2% 0% 5% 0%",
 		fontFamily: "Mellony"
 	},
 	StatusBox: {
-		height: "150px",
+		width: "100%",
+		height: "225px",
 		marginBottom: "2%",
 	},
 	popUpTitle: {
 		margin: "0% 2% 0% 2%",
-	},
-	exitBox: {
-		color:"green",
-		margin: "2% 0% 2% 0%"
 	},
 	blah: {
 		marginBottom: "10%",
@@ -168,6 +172,16 @@ const styles = {
 		width: "100%"
 	},
 	ProfileBoxTitle: {
-		fontFamily: "Mellony"
+		fontFamily: "Mellony",
+		paddingTop: "5%"
+	},
+	ProfileBoxHighlight: {
+		textAlign: "left",
+	},
+	exitBox: {
+		paddingTop: "3%"
+	},
+	ProfileBoxLink: {
+		paddingBottom: "3%"
 	}
 }

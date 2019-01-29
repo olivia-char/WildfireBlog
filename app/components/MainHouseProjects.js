@@ -10,8 +10,8 @@ export default class MainHouseProjects extends Component {
 	}
 	render() {
 		return (
-			<div className="row">
-			<div className="col-12 col-sm-12 col-md-12 col-lg-12" style={styles.Blog}>
+			<div className="row" style={styles.Blog}>
+			<div className="col-12 col-sm-12 col-md-12 col-lg-12" style={styles.BlogTitle}>
 				<h2>Froggy Oaks Main House Projects</h2>
 			</div>
 			<div className="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -42,8 +42,12 @@ export default class MainHouseProjects extends Component {
 }
 
 const styles = {
-  Blog: {
+	Blog: {
+		backgroundColor: "#E4E3D3"
+	},
+  BlogTitle: {
 		padding: "2%",
+		marginTop: "2%",
 		textAlign: "center",
 		fontFamily: "Courier"
   }

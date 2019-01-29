@@ -9,9 +9,9 @@ export default class AduProjects extends Component {
 	}
 	render() {
 		return (
-			<div className="row">
-				<div className="col-12 col-sm-12 col-md-12 col-lg-12" style={styles.Blog}>
-					<h2>Froggy Oaks ADU Projects</h2>
+			<div className="row" style={styles.Blog}>
+				<div className="col-12 col-sm-12 col-md-12 col-lg-12" style={styles.BlogTitle}>
+					<h2>Froggy Oaks Gnome Home Projects</h2>
 				</div>
 				<div className="col-12 col-sm-12 col-md-12 col-lg-12">
 					<BlogHeader />
@@ -71,9 +71,13 @@ export default class AduProjects extends Component {
 }
 
 const styles = {
-  Blog: {
+	Blog: {
+		backgroundColor: "#E4E3D3"
+	},
+	BlogTitle: {
 		padding: "2%",
+		marginTop: "2%",
 		textAlign: "center",
 		fontFamily: "Courier"
-  }
+	}
 }

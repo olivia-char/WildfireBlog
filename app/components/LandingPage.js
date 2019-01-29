@@ -5,6 +5,18 @@ import Header from './Header.js'
 import BasicIcon from '../assets/airbnb.png'
 import Compass from '../assets/compass.png'
 import BasicImage from '../assets/compass.png'
+import WaterTower1 from '../assets/waterTower1.png'
+
+import BackgroundMap from '../assets/FroggyOaksIcons/PropertyMap.png'
+import MoundIcon from '../assets/FroggyOaksIcons/Mound.png'
+import GardenIcon from '../assets/FroggyOaksIcons/Garden.png'
+import WaterTowerIcon from '../assets/FroggyOaksIcons/WaterTower.png'
+import WindMillIcon from '../assets/FroggyOaksIcons/WindMill.png'
+import MainHouseIcon from '../assets/FroggyOaksIcons/ArtboardMainHouse.png'
+import PoolIcon from '../assets/FroggyOaksIcons/Pool.png'
+import SolarPanelIcon from '../assets/FroggyOaksIcons/SolarPanel.png'
+import ADUIcon from '../assets/FroggyOaksIcons/ADU.png'
+
 
 export default class LandingPage extends Component {
 	constructor(props){
@@ -14,7 +26,6 @@ export default class LandingPage extends Component {
 	render() {
 		return (
       <div style={styles.background}>
-	
         <div className="row" style={styles.MapTitle}>
           <div className="col-3 col-sm-3 offset-sm-2 col-md-3 offset-md-2 col-lg-3 offset-lg-2">
 						  <h3>Sonoma County</h3>
@@ -26,32 +37,33 @@ export default class LandingPage extends Component {
 							<h3>Rebuilding Map</h3>
 					</div>
         </div>
-        <div className="row" style={styles.MapRow}>
+
+        <div className="row" style={styles.OuterMapRow}>
 					<div className="col-sm-3 col-md-3 col-lg-3">
 						<ProjectBox
-						imgSrc={BasicIcon}
+						imgSrc={MoundIcon}
 						imgSlide1={BasicImage}
 						imgSlide2={BasicImage}
 						imgSlide3={BasicImage}
 						imgSlide4={BasicImage}
 						title="Mound"
-						status="Incomplete"
-						interest="Pitched Roof"
+						status="Completed"
+						interest="New septic technology"
 						redirect="/gnome_home_projects"
-						style={styles.broken}
+						style={styles.complete}
 						info="this is a new type of tank with a smaller mound"
 						/>
         	</div>
 					<div className="col-sm-3 offset-sm-1 col-md-3 offset-md-1 col-lg-3 offset-lg-1">
 						<ProjectBox
-						imgSrc={BasicIcon}
+						imgSrc={GardenIcon}
 						imgSlide1={BasicImage}
 						imgSlide2={BasicImage}
 						imgSlide3={BasicImage}
 						imgSlide4={BasicImage}
 						title="Garden"
 						status="Incomplete"
-						interest="Pitched Roof"
+						interest="Year Round Garden"
 						redirect="/landscaping_projects"
 						style={styles.partial}
 						info="french style garden, need to fix permiter and build pagoda."
@@ -59,37 +71,37 @@ export default class LandingPage extends Component {
           </div>
           <div className="col-sm-3 col-md-3 col-lg-3">
 						<ProjectBox
-						imgSrc={BasicIcon}
-						imgSlide1={BasicImage}
-						imgSlide2={BasicImage}
-						imgSlide3={BasicImage}
-						imgSlide4={BasicImage}
+						imgSrc={WaterTowerIcon}
+						imgSlide1={WaterTower1}
+						imgSlide2={WaterTower1}
+						imgSlide3={WaterTower1}
+						imgSlide4={WaterTower1}
 						title="Water Tower"
-						status="Incomplete"
-						interest="Pitched Roof"
-						redirect="/main_house_projects"
+						status="Complete"
+						interest="Natural Aquifer"
+						redirect="/landscaping_projects"
 						style={styles.complete}
 						/>
           </div>
 				</div>
-				<div className="row" style={styles.MapRow}>
+				<div className="row" style={styles.InnerMapRow}>
 					<div className="col-sm-3 offset-sm-1 col-md-3 offset-md-1 col-lg-3 offset-lg-1" >
 						<ProjectBox
-						imgSrc={BasicIcon}
+						imgSrc={WindMillIcon}
 						imgSlide1={BasicImage}
 						imgSlide2={BasicImage}
 						imgSlide3={BasicImage}
 						imgSlide4={BasicImage}
 						title="Wind Mill"
 						status="Incomplete"
-						interest="Pitched Roof"
+						interest="Creates 30 percent electricty"
 						redirect="/landscaping_projects"
 						style={styles.broken}
 						/>
           </div>
-					<div className="col-sm-3 offset-sm-1 col-md-3 offset-md-1 col-lg-3 offset-lg-1" >
+					<div className="col-sm-3 offset-sm-1 col-md-3 offset-md-1 col-lg-3 offset-lg-1">
 						<ProjectBox
-							imgSrc={BasicIcon}
+							imgSrc={MainHouseIcon}
 							imgSlide1={BasicImage}
 							imgSlide2={BasicImage}
 							imgSlide3={BasicImage}
@@ -102,40 +114,40 @@ export default class LandingPage extends Component {
 						/>
           </div>
 				</div>
-				<div className="row" style={styles.MapRow}>
+				<div className="row" style={styles.InnerMapRow}>
 					<div className="col-sm-3 offset-sm-6 col-md-3 offset-md-6 col-lg-3 offset-lg-6">
 						<ProjectBox
-						imgSrc={BasicIcon}
+						imgSrc={PoolIcon}
 						imgSlide1={BasicImage}
 						imgSlide2={BasicImage}
 						imgSlide3={BasicImage}
 						imgSlide4={BasicImage}
 						title="Pool"
 						status="Incomplete"
-						interest="Pitched Roof"
+						interest="Wading pool addition"
 						redirect="/pool_projects"
 						style={styles.partial}
 						/>
           </div>
 					<div className="col-sm-3 col-md-3 col-lg-3">
 						<ProjectBox
-						imgSrc={BasicIcon}
+						imgSrc={SolarPanelIcon}
 						imgSlide1={BasicImage}
 						imgSlide2={BasicImage}
 						imgSlide3={BasicImage}
 						imgSlide4={BasicImage}
 						title="Solar Array"
 						status="Incomplete"
-						interest="Pitched Roof"
+						interest="100 percent sustainable"
 						redirect="/landscaping_projects"
 						style={styles.complete}
 						/>
 					</div>
 				</div>
-				<div className="row" style={styles.MapRow}>
+				<div className="row" style={styles.OuterMapRow}>
 					<div className="col-sm-3 offset-sm-2 col-md-3 offset-md-2 col-lg-3 offset-lg-2">
 						<ProjectBox
-							imgSrc={BasicIcon}
+							imgSrc={ADUIcon}
 							imgSlide1={BasicImage}
 							imgSlide2={BasicImage}
 							imgSlide3={BasicImage}
@@ -154,39 +166,50 @@ export default class LandingPage extends Component {
 }
 const styles = {
   background: {
-
-		padding: "3% 0% 5% 0%",
+		backgroundImage: "url("+ BackgroundMap +")",
+		backgroundSize: "cover",
+		height: "100%",
+		width: "100%",
+		textAlign: "center",
   },
 	MapTitle: {
 		textAlign:"center",
-		paddingBottom: "3%",
-		marginBottom: "3%",
-		fontFamily: "courier"
+		padding: "3%",
+
+		fontFamily: "Courier"
 	},
 	MapCompass: {
 		width: "60px",
 		transform: "rotate(315deg)",
 	},
-	MapRow: {
-		margin: "0% 0% 5% 0%"
+	OuterMapRow: {
+		postion: "relative",
+		marginTop: "2%"
 	},
-	MapBox: {
-		textAlign: "center"
+	InnerMapRow: {
+		postion: "relative",
+		marginTop: "5%"
 	},
   complete: {
-    boxShadow: "0px 0px 0px 5px green",
+    boxShadow: "0px 0px 0px 5px #294936",
     borderRadius: "50%",
-    textAlign:"center",
+		height: "100%",
+		width: "200px",
+		padding: "5%",
   },
   partial: {
-    boxShadow: "0px 0px 0px 5px orange",
+    boxShadow: "0px 0px 0px 5px #F19953",
     borderRadius: "50%",
-    textAlign:"center",
+		padding: "5%",
+		width: "200px",
+		height: "100%",
   },
   broken: {
-    boxShadow: "0px 0px 0px 5px red",
+    boxShadow: "0px 0px 0px 5px #A52422",
     borderRadius: "50%",
-    textAlign:"center",
+		padding: "5%",
+		width: "200px",
+		height: "100%"
   },
 
 }

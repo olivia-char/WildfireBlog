@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import BlogBox from './BlogBox.js'
 import BlogHeader from './BlogHeader.js'
 import BasicIcon from '../assets/airbnb.png'
+import Flower from '../assets/4.png'
 
 export default class LandscapingProjects extends Component {
 	constructor(props){
@@ -9,13 +10,14 @@ export default class LandscapingProjects extends Component {
 	}
 	render() {
 		return (
-			<div className="row">
-			<div className="col-12 col-sm-12 col-md-12 col-lg-12" style={styles.Blog}>
+			<div className="row" style={styles.Blog}>
+			<div className="col-12 col-sm-12 col-md-12 col-lg-12" style={styles.BlogTitle}>
 				<h2>Froggy Oaks Landscaping Projects</h2>
 			</div>
 			<div className="col-12 col-sm-12 col-md-12 col-lg-12">
 				<BlogHeader />
 			</div>
+
       <div className="col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
         <BlogBox
           title="Concrete Pavers EVERYWHERE!"
@@ -41,9 +43,13 @@ export default class LandscapingProjects extends Component {
 }
 
 const styles = {
-  Blog: {
+	Blog: {
+		backgroundColor: "#E4E3D3"
+	},
+	BlogTitle: {
 		padding: "2%",
+		marginTop: "2%",
 		textAlign: "center",
 		fontFamily: "Courier"
-  }
+	}
 }

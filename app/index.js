@@ -38,5 +38,6 @@ ReactDom.render(
 	<Router>
 		{routes}
 	</Router>,
-	document.getElementById('app')
+	document.getElementById('app'),
+
 )
