@@ -10,7 +10,7 @@ export default class Story extends Component {
 		return (
       <div className="row" style={styles.HeaderBackground}>
       <div className="co-2 col-sm-2 col-md-2 col-lg-2" style={styles.LinkBackground}>
-          <h3><Link to="/gnome_home_projects" replace className="Blog_Link_Title">Gnome Home Projects</Link></h3>
+          <h3><Link to="/adu_home_projects" replace className="Blog_Link_Title">The Coop' Projects</Link></h3>
         </div>
         <div className="co-2 col-sm-2 col-md-2 col-lg-2" style={styles.LinkBackground}>
         	<h3><Link to="/main_house_projects" replace className="Blog_Link_Title">Main House Projects</Link></h3>
@@ -29,7 +29,7 @@ export default class Story extends Component {
 const styles = {
 	HeaderBackground: {
 		fontFamily: "Mellony",
-		backgroundColor: "#E4E3D3",
+		backgroundColor: "#E8E9F3",
 		borderBottom:"2px solid #6D9F71",
 	},
 	LinkBackground: {

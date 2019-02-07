@@ -11,7 +11,7 @@ export default class AduProjects extends Component {
 		return (
 			<div className="row" style={styles.Blog}>
 				<div className="col-12 col-sm-12 col-md-12 col-lg-12" style={styles.BlogTitle}>
-					<h2>Froggy Oaks Gnome Home Projects</h2>
+					<h2>Froggy Oaks The Coop' Projects</h2>
 				</div>
 				<div className="col-12 col-sm-12 col-md-12 col-lg-12">
 					<BlogHeader />
@@ -72,12 +72,13 @@ export default class AduProjects extends Component {
 
 const styles = {
 	Blog: {
-		backgroundColor: "#E4E3D3"
+		backgroundColor: "#E8E9F3"
 	},
 	BlogTitle: {
 		padding: "2%",
 		marginTop: "2%",
 		textAlign: "center",
-		fontFamily: "Courier"
+		fontFamily: "Courier",
+
 	}
 }

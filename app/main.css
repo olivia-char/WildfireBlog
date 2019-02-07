@@ -37,3 +37,24 @@ p {
   margin-top: 2%;
   font-size: 25px;
 }
+.ProjectBox_Link {
+  padding-bottom: 3%;
+  text-decoration: none;
+  color: #E8E9F3;
+}
+.ProjectBox_Link:hover {
+  padding-bottom: 3%;
+  font-size: 14px;
+  text-decoration: none;
+  color: #C9B1BD;
+}
+span {
+  color: #1F363D;
+}
+.slick-slide img {
+  height: 350px;
+  width: 100%
+}
+.slick-slider{
+  margin: 2% 0% 15% 0%;
+}

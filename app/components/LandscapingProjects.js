@@ -44,7 +44,7 @@ export default class LandscapingProjects extends Component {
 
 const styles = {
 	Blog: {
-		backgroundColor: "#E4E3D3"
+		backgroundColor: "#E8E9F3"
 	},
 	BlogTitle: {
 		padding: "2%",

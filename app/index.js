@@ -25,7 +25,7 @@ const routes = (
 			 <Route exact path="/" component={LandingPage} />
 			 <Route path="/rebuilding_blog" component={Blog} />
 			 <Route path="/our_story" component={Story} />
-			 <Route path="/gnome_home_projects" component={AduProjects} />
+			 <Route path="/adu_home_projects" component={AduProjects} />
 			 <Route path="/main_house_projects" component={MainHouseProjects} />
 			 <Route path="/pool_projects" component={PoolProjects} />
 			 <Route path="/landscaping_projects" component={LandscapingProjects} />

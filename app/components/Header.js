@@ -36,6 +36,7 @@ const styles = {
 		fontFamily: "Mellony",
 		borderBottom: "1px solid #558B6E",
 		backgroundColor: "#6D9F71",
+		marginTop: "2%"
 	},
 	HeaderBox: {
 		padding: "0% 0% 0% 4%"
