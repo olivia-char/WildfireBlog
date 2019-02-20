@@ -14,6 +14,7 @@ export default class BlogBox extends Component {
 			return(
 				<div>
 					<div style={styles.BlogPost}>
+					<img src={this.props.imgSrc} style={styles.imgStyle}/>
 					<p>{this.props.paraOne}</p>
 					<p>{this.props.paraTwo}</p>
 					<p>{this.props.paraThree}</p>
@@ -51,16 +52,16 @@ export default class BlogBox extends Component {
 	render() {
 		return (
 			<div className="row" style={styles.BlogBox}>
-        <div className="col-12 col-sm-12 col-md-12 col-lg-12">
-					<h1 style={styles.BlogBoxTitle}>{this.props.title}</h1>
+        <div className="col-8 col-sm-8 col-md-8 col-lg-8 ">
+					<h2 style={styles.BlogBoxTitle}>{this.props.title}:</h2>
         </div>
-				<div className="col-10 col-sm-10 offset-sm-1 col-md-10 offset-md-1 col-lg-10 offset-lg-1">
-					  <h4>{this.props.tagline}</h4>
+				<div className="col-4 col-sm-4 col-md-4 col-lg-4">
+					<h6 style={styles.BlogBoxDate}>{this.props.date}, 2019</h6>
 				</div>
-        <div className="col-4 col-sm-4 offset-sm-4 col-md-4 offset-md-4 col-lg-4 col-lg-4">
-          <img src={this.props.imgSrc} style={styles.imgStyle}/>
-        </div>
-				<div className="col-12 col-sm-12 col-md-12 col-lg-12" onClick={this.openBlogPost.bind(this)}>
+				<div className="col-10 col-sm-10 offset-sm-1 col-md-10 offset-md-1 col-lg-10 offset-lg-1">
+					  <h5>{this.props.tagline}</h5>
+				</div>
+				<div className="col-12 col-sm-12 col-md-12 col-lg-12" style={styles.blogButton} onClick={this.openBlogPost.bind(this)}>
 					{this.renderButton()}
 				</div>
         <div className="col-sm-10 offset-sm-1 col-md-10 offset-md-1 col-lg-10 offset-lg-1">
@@ -73,29 +74,39 @@ export default class BlogBox extends Component {
 
 const styles = {
   BlogBox: {
-    backgroundColor:"#6F9283",
-		border: "1px solid #6D9F71",
+		border: "5px solid #6F9283",
     margin: "5%",
 		fontFamily:"Courier",
 		padding: "3%",
 		textAlign:"center",
+		color: "#1F363D"
   },
 	BlogBoxTitle: {
 		fontFamily:"Mellony",
 		padding: "4% 0% 4% 0%",
-		color: "#E8E9F3"
+		textAlign: "left"
 	},
 	BlogPost: {
 		textAlign: "left",
-		marginTop: "5%"
+		marginTop: "0%",
+	},
+	blogButton: {
+		textAlign: "center",
+		fontFamily: "Mellony",
+		marginTop: "2%",
+		height: "30px"
 	},
   imgStyle: {
     width:"100%",
-    margin:"10% 0% 5% 0%",
+    marginBottom:"5%",
+		border: "1px solid #1F363D"
   },
 	Blog_Button: {
 		fontFamily: "Mellony",
 		textAlign: "center",
 		marginTop: "2%",
+	},
+	BlogBoxDate: {
+		textAlign: "right"
 	}
 }

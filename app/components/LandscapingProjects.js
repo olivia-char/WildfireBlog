@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import BlogBox from './BlogBox.js'
 import BlogHeader from './BlogHeader.js'
-import BasicIcon from '../assets/airbnb.png'
-import Flower from '../assets/4.png'
+import BlogImage1 from '../assets/AduImages/PathwayCollage.png'
+
 
 export default class LandscapingProjects extends Component {
 	constructor(props){
@@ -11,32 +11,24 @@ export default class LandscapingProjects extends Component {
 	render() {
 		return (
 			<div className="row" style={styles.Blog}>
-			<div className="col-12 col-sm-12 col-md-12 col-lg-12" style={styles.BlogTitle}>
-				<h2>Froggy Oaks Landscaping Projects</h2>
-			</div>
-			<div className="col-12 col-sm-12 col-md-12 col-lg-12">
-				<BlogHeader />
-			</div>
+				<div className="col-12 col-sm-12 col-md-12 col-lg-12" style={styles.BlogTitle}>
+					<h2>Froggy Oaks Landscaping Projects</h2>
+				</div>
+				<div className="col-12 col-sm-12 col-md-12 col-lg-12">
+					<BlogHeader />
+				</div>
 
-      <div className="col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
-        <BlogBox
-          title="Concrete Pavers EVERYWHERE!"
-          tagline="Make Your Roof Tall and Why it Matters and Why You'll Love it"
-          imgSrc={BasicIcon}
-          paraOne="This expands upon why having tall roofs are amazing. Such as how they make a small place look larger due to high ceilings. 750 sq ft is doubled."
-          paraTwo="this is the second paragraph"
-        />
-      </div>
-      <div className="col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
-        <BlogBox
-          title="Let's build a Pagoda"
-          tagline="Necessities to Making Small Living Work"
-          imgSrc={BasicIcon}
-          paraOne="This is how to use 1000 sq ft to your advantage. How to design and optimize space."
-          paraTwo="this is the second paragraph"
-          paraThree="and sometimes they can have a third if neccesary"
-        />
-      </div>
+	      <div className="col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+					<BlogBox
+					 title="Creating the Right Path"
+					 date="February 18"
+					 tagline="How Are We Going To Build This Thing?"
+					 imgSrc={BlogImage1}
+					 paraOne="At the moment our path includes an old bridge and loose flagstone pieces, as well as a mix of hay and grass seed. With all the recent rain the property has become a mud pit and we are trying to grow grass as fast as possible. So while we wait and try to thwart the birds from eating our seeds, we are planning our pathway."
+					 paraTwo="Our current ideas incorporate the old flagstone, our abundant natural rocks and concrete pavers to create a pathway around The Coop'."
+					 paraThree="As of now, we are looking at different paver molds and are waiting for the rains to subside. We'll keep you posted!"
+				 />
+				 </div>
 			</div>
 		)
 	}

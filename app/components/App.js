@@ -5,6 +5,7 @@ import '../main.css';
 
 import Header from './Header.js'
 import LandingPage from './LandingPage.js'
+import Footer from './Footer.js'
 
 export default class App extends Component {
 	constructor(props){

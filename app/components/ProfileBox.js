@@ -27,23 +27,28 @@ export default class ProfileBox extends Component {
           <Slider {...settings} className="row">
             <div className="col-12 col-sm-12 col-md-12 col-lg-12">
               <img src={this.props.imgSlide1} style={styles.ImgStyle}/>
+							<div className="slide_caption">{this.props.caption1}</div>
             </div>
             <div className="col-12 col-sm-12 col-md-12 col-lg-12">
               <img src={this.props.imgSlide2} style={styles.ImgStyle}/>
+							<div className="slide_caption">{this.props.caption2}</div>
             </div>
             <div className="col-12 col-sm-12 col-md-12 col-lg-12">
               <img src={this.props.imgSlide3} style={styles.ImgStyle}/>
+							<div className="slide_caption">{this.props.caption3}</div>
             </div>
           <div className="col-12 col-sm-12 col-md-12 col-lg-12" >
               <img src={this.props.imgSlide4} style={styles.ImgStyle}/>
+							<div className="slide_caption">{this.props.caption4}</div>
             </div>
           </Slider>
 
         </div>
         <div className="col-10 col-sm-10 offset-sm-1 col-md-10 offset-md-1 col-lg-10 offset-lg-1" style={styles.ProfileBoxHighlight}>
-          <h4>Highlights:</h4>
+          <h5>Highlights:</h5>
           <ul>
-            <span><li>{this.props.interest}</li></span>
+            <span><li>{this.props.interest1}</li></span>
+            <span><li>{this.props.interest2}</li></span>
           </ul>
         </div>
         <div className="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -57,7 +62,7 @@ export default class ProfileBox extends Component {
 
 const styles = {
   ProfileBoxBackground: {
-    backgroundColor:"#8B94A3",
+    backgroundColor:"#9E9A95",
     textAlign:"center",
     fontFamily: "Courier",
     color: "#E8E9F3",
@@ -74,6 +79,6 @@ const styles = {
   ImgStyle: {
     width: "100%",
     height: "500px",
-    border: "1px solid black"
+    border: "1px solid #1F363D"
   }
 }

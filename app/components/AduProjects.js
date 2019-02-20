@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import BlogBox from './BlogBox.js'
 import BlogHeader from './BlogHeader.js'
-import BasicIcon from '../assets/airbnb.png'
+import BlogImage1 from '../assets/AduImages/ToDoList.png'
 
 export default class AduProjects extends Component {
 	constructor(props){
@@ -18,53 +18,15 @@ export default class AduProjects extends Component {
 				</div>
 	      <div className="col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
 	        <BlogBox
-	          title="To the Roof!"
-	          tagline="Make Your Roof Tall and Why it Matters and Why You'll Love it"
-	          imgSrc={BasicIcon}
-	          paraOne="This expands upon why having tall roofs are amazing. Such as how they make a small place look larger due to high ceilings. 750 sq ft is doubled."
-	          paraTwo="this is the second paragraph"
-	        />
+	          title="The Last 'To Do List'"
+						date="February 18"
+	          tagline="The Constant Finishing Touches Inside and Out"
+	          imgSrc={BlogImage1}
+	          paraOne="Here is a list of things we still need to do, it's a small list, but each item we add doubles the list."
+	          paraTwo="So here it goes - the half bathroom needs to be wallpapered, the closet door needs to be painted, parts of the trim still needs nail setting, putty and paint, every window frame needs to be stained, the bridge needs restoration, as well as building an actual pathway from the driveway to The Coop', the deck needs an apron and every now and then I notice a spot on the wall that needs paint. Once we have the final inspection we can secure the dishwasher to the floor. And lastly, I know I forgot something important."
+						paraThree="What I have learned in this brief and chaotic building process is that there are constant minute choices. Even with a small 696 sq. ft home."
+				  />
 	      </div>
-	      <div className="col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
-	        <BlogBox
-	          title="Small Living, How to Maximize and What's Important"
-	          tagline="Necessities to Making Small Living Work"
-	          imgSrc={BasicIcon}
-	          paraOne="This is how to use 1000 sq ft to your advantage. How to design and optimize space."
-	          paraTwo="this is the second paragraph"
-	          paraThree="and sometimes they can have a third if neccesary"
-	        />
-	      </div>
-				<div className="col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
-					<BlogBox
-						title="Small Living, How to Maximize and What's Important"
-						tagline="Necessities to Making Small Living Work"
-						imgSrc={BasicIcon}
-						paraOne="This is how to use 1000 sq ft to your advantage. How to design and optimize space."
-						paraTwo="this is the second paragraph"
-						paraThree="and sometimes they can have a third if neccesary"
-					/>
-				</div>
-				<div className="col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
-					<BlogBox
-						title="Small Living, How to Maximize and What's Important"
-						tagline="Necessities to Making Small Living Work"
-						imgSrc={BasicIcon}
-						paraOne="This is how to use 1000 sq ft to your advantage. How to design and optimize space."
-						paraTwo="this is the second paragraph"
-						paraThree="and sometimes they can have a third if neccesary"
-					/>
-				</div>
-				<div className="col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
-					<BlogBox
-						title="Small Living, How to Maximize and What's Important"
-						tagline="Necessities to Making Small Living Work"
-						imgSrc={BasicIcon}
-						paraOne="This is how to use 1000 sq ft to your advantage. How to design and optimize space."
-						paraTwo="this is the second paragraph"
-						paraThree="and sometimes they can have a third if neccesary"
-					/>
-				</div>
 			</div>
 		)
 	}

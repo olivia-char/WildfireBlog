@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from './Header.js'
 import StatusBox from './StatusBox.js'
 import ProfileBox from './ProfileBox.js'
-
+import Footer from './Footer.js'
 import Compass from '../assets/compass.png'
 
 import BackgroundMap from '../assets/FroggyOaksIcons/PropertyMap.png'
@@ -16,21 +16,27 @@ import PoolIcon from '../assets/FroggyOaksIcons/Pool.png'
 import SolarPanelIcon from '../assets/FroggyOaksIcons/SolarPanel.png'
 import ADUIcon from '../assets/FroggyOaksIcons/ADU.png'
 
-
+import Mound1 from '../assets/MoundImages/Mound1.png'
+import Mound2 from '../assets/MoundImages/Mound2.png'
 import Mound3 from '../assets/MoundImages/Mound3.png'
+import Mound4 from '../assets/MoundImages/Mound4.png'
 import Garden1 from '../assets/GardenImages/Garden1.png'
 import Garden2 from '../assets/GardenImages/Garden2.png'
 import Garden3 from '../assets/GardenImages/Garden3.png'
+import Garden4 from '../assets/GardenImages/Garden4.png'
 import WaterTower1 from '../assets/WaterTowerImages/WaterTower1.png'
 import WaterTower2 from '../assets/WaterTowerImages/WaterTower2.png'
 import WaterTower3 from '../assets/WaterTowerImages/WaterTower3.png'
 import WaterTower4 from '../assets/WaterTowerImages/WaterTower4.png'
 import WindMill1 from '../assets/WindMillImages/WindMill1.png'
 import WindMill2 from '../assets/WindMillImages/WindMill2.png'
+import WindMill3 from '../assets/WindMillImages/WindMill3.png'
+import WindMill4 from '../assets/WindMillImages/WindMill4.png'
 import MainHouse1 from '../assets/MainHouseImages/MainHouse1.png'
 import MainHouse2 from '../assets/MainHouseImages/MainHouse2.png'
 import MainHouse3 from '../assets/MainHouseImages/MainHouse3.png'
 import MainHouse4 from '../assets/MainHouseImages/MainHouse4.png'
+import Solar1 from '../assets/SolarImages/Solar1.png'
 import Solar2 from '../assets/SolarImages/Solar2.png'
 import Solar3 from '../assets/SolarImages/Solar3.png'
 import Solar4 from '../assets/SolarImages/Solar4.png'
@@ -41,6 +47,9 @@ import Pool4 from '../assets/PoolImages/Pool4.png'
 import Adu1 from '../assets/AduImages/Adu1.png'
 import Adu2 from '../assets/AduImages/Adu2.png'
 import Adu3 from '../assets/AduImages/Adu3.png'
+import Adu4 from '../assets/AduImages/Adu4.png'
+
+
 
 
 export default class LandingPage extends Component {
@@ -63,16 +72,24 @@ export default class LandingPage extends Component {
 				return (
 					<div>
 						<div className="row" style={styles.exitButton}>
-							<div className="col-1 col-sm-1 col-md-1 col-lg-1 ">
+							<div className="col-1 col-sm-1 offset-sm-11 col-md-1 offset-md-11 col-lg-1 offset-lg-11">
 								<h1 onClick={this.onClickMap.bind(this)}>x</h1>
 							</div>
 						</div>
 						<ProfileBox
-							imgSlide1={Mound3}
+							imgSlide1={Mound1}
+							caption1="AdvanTex AX20 Treatment System"
+							imgSlide2={Mound2}
+							caption2="Low Profile and Environmentlly Friendly"
+							imgSlide3={Mound3}
+							caption3="Efficient Small Mound"
+							imgSlide4={Mound4}
+							caption4="Less Intrusive to the Property"
 							title="Mound"
 							status="complete"
-							interest="blah blah balh"
-							redirect="/rebuilding_blog"
+							interest1="Orenco's latest technology AdvanTex AX20, requires very little space to install and reduces the size of your drainfield or mound system."
+							interest2="Uses environmetally sustainable treatment of residential wastewater flow."
+							redirect="/landscaping_projects"
 						/>
 					</div>
 				)
@@ -96,18 +113,24 @@ export default class LandingPage extends Component {
 				return (
 					<div>
 						<div className="row" style={styles.exitButton}>
-							<div className="col-1 col-sm-1 col-md-1 col-lg-1 ">
+							<div className="col-1 col-sm-1 offset-sm-11 col-md-1 offset-md-11 col-lg-1 offset-lg-11">
 								<h1 onClick={this.onClickMap.bind(this)}>x</h1>
 							</div>
 						</div>
 						<ProfileBox
 							imgSlide1={Garden1}
+							caption1="Original View of Garden"
 							imgSlide2={Garden2}
+							caption2="Most of Damage Occured in the Back"
 							imgSlide3={Garden3}
+							caption3="We've Added and Fixed Garden Beds"
+							imgSlide4={Garden4}
+							caption4="Current View of Garden"
 							title="Garden"
 							status="incomplete"
-							interest="blah blah balh blahclskfjslkdfjs fksdlhfls fdksfj"
-							redirect="/rebuilding_blog"
+							interest1="One of the first additions to Froggy Oaks, the garden had produced Burbank Plum trees, Bodega Red potatoes and Heirloom tomatoes for nearly 20 years."
+							interest2="Future plans include planting a fresh cut flower bed, updating the raised beds structure and rebuilding the gazebo."
+							redirect="/landscaping_projects"
 						/>
 					</div>
 				)
@@ -131,19 +154,24 @@ export default class LandingPage extends Component {
 				return (
 					<div>
 						<div className="row" style={styles.exitButton}>
-							<div className="col-1 col-sm-1 col-md-1 col-lg-1 ">
+							<div className="col-1 col-sm-1 offset-sm-11 col-md-1 offset-md-11 col-lg-1 offset-lg-11">
 								<h1 onClick={this.onClickMap.bind(this)}>x</h1>
 							</div>
 						</div>
 						<ProfileBox
 							imgSlide1={WaterTower1}
+							caption1="Original View of Water Tower"
 							imgSlide2={WaterTower2}
+							caption2="The Fire Completely Disintegrated the Plastic Water Tank"
 							imgSlide3={WaterTower3}
+							caption3="Upgraded to an Aluminim Water Tank"
 							imgSlide4={WaterTower4}
-							title="Water"
+							caption4="Current View of Water Tank"
+							title="Water Tower"
 							status="complete"
-							interest="Wilson was the original name for the water tower. A new name has not been chosen yet."
-							redirect="/rebuilding_blog"
+							interest1="The original Water Tower was a plastic water tank decorated with bamboo and was lovingly called Wilson."
+							interest2="The new water tank is made from aluminium and starts drawing water from our personal aquifer at 180ft to 220ft."
+							redirect="/landscaping_projects"
 						/>
 					</div>
 				)
@@ -173,13 +201,18 @@ export default class LandingPage extends Component {
 						</div>
 						<ProfileBox
 							imgSlide1={WindMill1}
+							caption1="Original View of Windmill"
 							imgSlide2={WindMill2}
-							imgSlide3={WaterTower3}
-							imgSlide4={WaterTower4}
+							caption2="Windmill Generator Burned in the Fire"
+							imgSlide3={WindMill3}
+							caption3="Currently Nonoperational"
+							imgSlide4={WindMill4}
+							caption4="Current View of WindMill"
 							title="Windmill"
 							status="broken"
-							interest="blah blah balh"
-							redirect="/rebuilding_blog"
+							interest1="At 80ft tall the Windmill can produce renewable engery for Froggy Oaks."
+							interest2="Native birds love the Windmill, in fact, they nest in the turbine and frequently perch on the tail."
+							redirect="/landscaping_projects"
 						/>
 					</div>
 				)
@@ -209,12 +242,17 @@ export default class LandingPage extends Component {
 						</div>
 						<ProfileBox
 							imgSlide1={MainHouse1}
+							caption1="Original View of Main House"
 							imgSlide2={MainHouse2}
+							caption2="The Day After the Fire"
 							imgSlide3={MainHouse3}
+							caption3="After Debris had been Removed"
 							imgSlide4={MainHouse4}
+							caption4="Current View of Main House"
 							title="Main House"
 							status="broken"
-							interest="blah blah balh"
+							interest1="Built in 1979, the original Main House incorporated the naturally beautiful environment through floor to cieling windows."
+							interest2="Instead of recreating the original house, a Tahoe inspired cabin, we will be building a modern farmhouse."
 							redirect="/main_house_projects"
 						/>
 					</div>
@@ -245,12 +283,17 @@ export default class LandingPage extends Component {
 						</div>
 						<ProfileBox
 							imgSlide1={Pool1}
+							caption1="Original View of Pool"
 							imgSlide2={Pool2}
+							caption2="All Decking and Foliage Competely Burned"
 							imgSlide3={Pool3}
+							caption3="Started from the Bottom"
 							imgSlide4={Pool4}
+							caption4="Current View of Pool"
 							title="Pool"
 							status="incomplete"
-							interest="blah blah balh"
+							interest1="Originally the pool used chlorine; the new pool will use salt water."
+							interest2="New additions to the pool area include a walk-in wading pool and hot tub."
 							redirect="/pool_projects"
 						/>
 					</div>
@@ -280,13 +323,18 @@ export default class LandingPage extends Component {
 							</div>
 						</div>
 						<ProfileBox
-							imgSlide1={Solar2}
+							imgSlide1={Solar1}
+							caption1="Creating the Solar Foundation"
 							imgSlide2={Solar2}
+							caption2="Ready for the Solar Pannels"
 							imgSlide3={Solar3}
+							caption3="After Compeletion of Solar Array"
 							imgSlide4={Solar4}
+							caption4="Current View of Solar Array"
 							title="Solar Array"
 							status="complete"
-							interest="blah blah balh"
+							interest1="The orignal solar pannels were for heating the pool, however, the new solar array creates over 100% of the engery we use, making us completely self-sufficient."
+							interest2="Froggy Oaks' first completed project."
 							redirect="/landscaping_projects"
 						/>
 					</div>
@@ -317,12 +365,17 @@ export default class LandingPage extends Component {
 						</div>
 						<ProfileBox
 							imgSlide1={Adu1}
+							caption1="Orignal View of The Coop'"
 							imgSlide2={Adu2}
-							imgSlide3={Adu2}
-							imgSlide4={WaterTower4}
+							caption2="Creating the Foundation"
+							imgSlide3={Adu3}
+							caption3="The Basic Structure"
+							imgSlide4={Adu4}
+							caption="Current View of The Coop'"
 							title="The Coop'"
-							status="complete"
-							interest="blah blah balh"
+							status="incomplete"
+							interest1="Before the Accessory Dwelling Unit there was a chicken coop with chickens."
+							interest2="First it was simply called the ADU, which evolved into the Gnome Home, but it is now refered to as The Coop'."
 							redirect="/adu_home_projects"
 						/>
 					</div>
@@ -380,7 +433,7 @@ export default class LandingPage extends Component {
 									<StatusBox
 									imgSrc={MoundIcon}
 									title="Mound"
-									status="Completed"
+									status="Complete"
 									style={styles.complete}
 									/>
 									</div>
@@ -511,13 +564,14 @@ const styles = {
 	},
 	MapBackground: {
 		backgroundImage: "url("+ BackgroundMap +")",
-		backgroundSize: "cover",
+		backgroundSize: "100% 100%",
 		textAlign: "center",
 		margin: "0% 5% 5% 5%",
-		position: "absolute"
+		position: "absolute",
+		border: "1px solid #1F363D"
 	},
 	DummyRow: {
-		height: "125px"
+		height: "150px",
 	},
 	MapRow: {
 		height: "250px"

@@ -17,13 +17,13 @@ export default class Header extends Component {
           <h1><Link to="/" replace style={styles.HeaderTitle}>Rebuidling Froggy Oaks</Link></h1>
         </div>
 				<div className="co-2 col-sm-2 col-md-2 col-lg-2" style={styles.LinkBackground}>
-					<h4><Link to="/our_story" replace className="Link_Title">Our Story</Link></h4>
+					<h5><Link to="/our_story" replace className="Link_Title">Our Story</Link></h5>
 				</div>
 				<div className="co-2 col-sm-2 col-md-2 col-lg-2" style={styles.LinkBackground}>
-					<h4><Link to="/rebuilding_blog" replace className="Link_Title">Rebuilding Blog</Link></h4>
+					<h5><Link to="/rebuilding_blog" replace className="Link_Title">Rebuilding Blog</Link></h5>
 				</div>
 				<div className="co-2 col-sm-2 col-md-2 col-lg-2" style={styles.LinkBackground}>
-					<h4><Link to="/" replace className="Link_Title">Map</Link></h4>
+					<h5><Link to="/" replace className="Link_Title">Map</Link></h5>
 				</div>
 			</div>
 		)
